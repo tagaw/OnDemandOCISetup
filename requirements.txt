@@ -1,0 +1,5 @@
+oci
+mcstatus
+dotenv
+libtmux
+requests

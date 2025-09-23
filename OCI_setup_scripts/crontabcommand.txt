@@ -1,0 +1,1 @@
+@reboot /path/to/your/start_all_scripts.sh
