@@ -134,13 +134,11 @@ def main():
         for mc_session in mc_sessions:
             for pane in mc_session.panes:
                 pane.send_keys("stop\n")
-                
+            
+        # give time for server to shut down
+        time.sleep(60)
         mc_sessions = s.sessions.filter(session_name="MC_SERVER_RUNNING")
         
-        if len(mc_sessions) <= 0:
-            print("The server has shutdown sucessfully")
-            break
-        time.sleep(60)
     
     # wait in case of bug
     print("gonna shut down in 60s")
